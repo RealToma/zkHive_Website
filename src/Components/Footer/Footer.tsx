@@ -92,7 +92,7 @@ export const Footer = () => {
             </button>
           </div>
           <p className='my-[10px] text-[#EBEDF0] text-base not-italic font-medium leading-[120%]'>
-            Email:contact@zkhive.io
+            Email: contact@zkhive.io
           </p>
           <p className='text-[#EBEDF0] text-base not-italic font-medium leading-[120%] opacity-[0.5]'>
             zkHive Token ©, All rights reserved.
