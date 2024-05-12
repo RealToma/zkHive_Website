@@ -1,0 +1,16 @@
+.line {
+  background: linear-gradient(
+    90deg,
+    rgba(97, 183, 240, 0) 0%,
+    #61b7f0 16.57%,
+    #fcf406 83.47%,
+    rgba(252, 244, 6, 0) 100%
+  );
+}
+
+.button {
+  background: var(
+    --Linear,
+    linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%)
+  );
+}

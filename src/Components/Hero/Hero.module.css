@@ -1,0 +1,86 @@
+@property --border {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.social_button {
+  clip-path: polygon(50% 0, 100% 20%, 99% 82%, 49% 99%, 1% 81%, 0 20%);
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+}
+
+.hero_button {
+  clip-path: polygon(
+    0.532% 70.923%,
+    0.532% 30.308%,
+    8.168% 2%,
+    91.168% 2%,
+    99.468% 30.308%,
+    99.468% 68.462%,
+    91.168% 98%,
+    8.168% 98%,
+    0.532% 70.923%
+  );
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+}
+
+.hero_button_outline {
+  clip-path: polygon(
+    0.532% 70.923%,
+    0.532% 30.308%,
+    8.168% 2%,
+    91.168% 2%,
+    99.468% 30.308%,
+    99.468% 68.462%,
+    91.168% 98%,
+    8.168% 98%,
+    0.532% 70.923%
+  );
+  position: relative;
+  border: 1px solid;
+}
+
+.hero_button_outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  -webkit-mask: paint(polygon-border);
+  background: #000;
+}
+
+.outline_button {
+  border: 1px solid;
+  position: relative;
+  clip-path: polygon(
+    0.532% 70.923%,
+    0.532% 30.308%,
+    8.168% 2%,
+    91.168% 2%,
+    99.468% 30.308%,
+    99.468% 68.462%,
+    91.168% 98%,
+    8.168% 98%,
+    0.532% 70.923%
+  );
+  position: relative;
+  background: red;
+}
+
+outline_button::before {
+  content: '';
+  position: absolute;
+  padding: 34px 36px;
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  inset: 0;
+  padding: 1px;
+}

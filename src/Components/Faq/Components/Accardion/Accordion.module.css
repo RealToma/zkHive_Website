@@ -1,0 +1,24 @@
+.border {
+  /* border: 2px solid; */
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(97, 183, 240, 0.1) 15.84%,
+    rgba(252, 244, 6, 0.1) 100%
+  );
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

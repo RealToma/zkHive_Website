@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'DemiBold';
+  src: url('../public/fonts/Inter-Regular.ttf');
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DemiBold';
+  background-color: black;
+  overflow-x: hidden !important;
+}
+
+.header_border_links {
+  border: 1px solid;
+  position: relative;
+}
+
+.header_border_links::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 1px;
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.header_border_links_bg {
+  background: linear-gradient(
+    90deg,
+    rgba(97, 183, 240, 0.1) 15.84%,
+    rgba(252, 244, 6, 0.1) 100%
+  );
+}
+
+.default_button {
+  clip-path: polygon(
+    0.556% 70.923%,
+    0.556% 30.308%,
+    8.188% 2%,
+    91.148% 2%,
+    99.444% 30.308%,
+    99.444% 68.462%,
+    91.148% 98%,
+    8.188% 98%,
+    0.556% 70.923%
+  );
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.light {
+  border-radius: 559px;
+  background: linear-gradient(
+      90deg,
+      rgba(97, 183, 240, 0.4) 15.84%,
+      rgba(252, 244, 6, 0.4) 100%
+    ),
+    url('/public/img/wall.png');
+  /* filter: blur(257px); */
+  /* filter: blur(257px); */
+  /* -webkit-filter: blur(257px); */
+}

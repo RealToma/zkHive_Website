@@ -1,0 +1,23 @@
+.header_border_links_bg {
+  background: linear-gradient(
+    90deg,
+    rgba(97, 183, 240, 0.2) 15.84%,
+    rgba(252, 244, 6, 0.2) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.buy_token_button {
+  clip-path: polygon(
+    0.556% 70.923%,
+    0.556% 30.308%,
+    8.188% 2%,
+    91.148% 2%,
+    99.444% 30.308%,
+    99.444% 68.462%,
+    91.148% 98%,
+    8.188% 98%,
+    0.556% 70.923%
+  );
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+}

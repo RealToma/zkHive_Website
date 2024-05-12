@@ -1,0 +1,17 @@
+.card_bg {
+  background: linear-gradient(
+    90deg,
+    rgba(97, 183, 240, 0.15) 15.84%,
+    rgba(252, 244, 6, 0.15) 100%
+  );
+}
+
+.line {
+  background: linear-gradient(
+    90deg,
+    rgba(97, 183, 240, 0) 0%,
+    #61b7f0 21.26%,
+    #fcf406 83.69%,
+    rgba(252, 244, 6, 0) 100%
+  );
+}
