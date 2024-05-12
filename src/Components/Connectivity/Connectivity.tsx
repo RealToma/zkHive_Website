@@ -1,10 +1,10 @@
 import styles from './Connectivity.module.css'
 
 const CONNECTIVITY = [
-  'Peer-To-Peer Verification',
-  'Anomaly Detection',
-  'Files Scan',
+  'Realtime 24/7 group protection',
   'Preemptive Mitigation',
+  'Files Scan',
+  'Anomaly Detection',
   'Peer-To-Peer Verification',
   'Anomaly Detection',
 ]
@@ -30,7 +30,7 @@ export const Connectivity = () => {
           <img src='/img/powered-by-connectivity-ai.png' />
         </div>
         <div className=' w-full lg:w-[60%]'>
-          <h1 className='text-white ml-[28px] text-[22px] lg:text-[49px] font-bold  leading-[34px] lg:leading-[63.7px] text-left'>
+          <h1 className='text-white ml-[28px] text-[22px] lg:text-[49px] font-bold  leading-[34px] lg:leading-[63.7px] text-left title'>
             Powered by connectivity AI
           </h1>
           <div className='flex gap-x-[28px] '>

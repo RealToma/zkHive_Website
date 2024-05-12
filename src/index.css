@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "DemiBold";
-  src: url("../public/fonts/Inter-Regular.ttf");
+  font-family: 'DemiBold';
+  src: url('../public/fonts/Inter-Regular.ttf');
 }
 
 * {
@@ -12,9 +12,13 @@
 }
 
 body {
-  font-family: "DemiBold";
+  font-family: 'DemiBold';
   background-color: black;
   overflow-x: hidden !important;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 .header_border_links {
@@ -23,7 +27,7 @@ body {
 }
 
 .header_border_links::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   border-radius: 50px;
@@ -75,7 +79,7 @@ body {
       rgba(97, 183, 240, 0.4) 15.84%,
       rgba(252, 244, 6, 0.4) 100%
     ),
-    url("/public/img/wall.png");
+    url('/public/img/wall.png');
   /* filter: blur(257px); */
   /* filter: blur(257px); */
   /* -webkit-filter: blur(257px); */
@@ -94,4 +98,11 @@ body {
   background-color: #fbda00;
   cursor: pointer !important;
   border-radius: 2px;
+}
+
+.title {
+  background: #64b7ea;
+  background: linear-gradient(to right, #64b7ea 0%, #b5dc3a 50%, #f3e901 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

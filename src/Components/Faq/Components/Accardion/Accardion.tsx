@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import styles from './Accordion.module.css'
 import { Minus } from '../../../../icons/Minus'
 import { Plus } from '../../../../icons/Plus'
 
 interface Props {
   title: string
-  description: string
+  description: string | ReactNode
 }
 
 export const Accardion = ({ title, description }: Props) => {

@@ -17,7 +17,7 @@ const P2ROADS = [
 const P3ROADS = [
   'Establish partnerships with industry leaders in the telegram security landscape',
   'Establish partnerships cloud based security products',
-  'Increase the adoption',
+
   'Introduce Neural Network solutions',
 ]
 
@@ -54,7 +54,7 @@ export const Roadmap = () => {
         <Card
           roads={P4ROADS}
           title='P4'
-          className='row-span-3 pb-[27px] hidden lg:block'
+          className='row-span-3 pb-[27px] hidden lg:flex'
         />
         <Card
           roads={P2ROADS}

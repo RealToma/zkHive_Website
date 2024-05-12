@@ -25,13 +25,16 @@ export const Features = () => {
           <img src='/img/blur.png' className='!max-w-max w-auto' />
           <img
             src='/img/wall.png'
-            className='!max-w-max absolute w-auto top-0'
+            className='!max-w-max  absolute w-auto top-0'
           />
         </div>
         <div className='w-full flex justify-center flex-col lg:block relative'>
-          <img src='/img/hero-img.png' className='' />
+          {/* <img src='/img/hero-img.png' className='' /> */}
+          <video autoPlay muted loop style={{ mixBlendMode: 'screen' }}>
+            <source src='/img/bee.mp4' type='video/mp4' />
+          </video>
           <div
-            className={`absolute left-1/2 -translate-x-1/2 backdrop-blur-sm top-[-140px] max-w-[536px] ${styles.border_card} ${styles.card_bg} py-[75px] rounded-[20px]`}
+            className={`absolute left-1/2 -translate-x-1/2 backdrop-blur-sm top-[-210px] max-w-[536px] ${styles.border_card} ${styles.card_bg} py-[75px] rounded-[20px]`}
           >
             <h1 className='text-[49px] font-bold leading-[63.7px] text-center text-white'>
               zkHive Features

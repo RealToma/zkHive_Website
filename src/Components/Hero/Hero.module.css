@@ -84,3 +84,7 @@ outline_button::before {
   inset: 0;
   padding: 1px;
 }
+
+.video {
+  mix-blend-mode: screen !important;
+}

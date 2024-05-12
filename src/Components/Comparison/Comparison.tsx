@@ -1,4 +1,43 @@
 import styles from './Comparison.module.css'
+
+const ComparisonData = [
+  {
+    title: 'File scanning and analysis',
+    noProtection: 'N/A',
+    existingProtection: 'N/A',
+    zkHiveProtection: 'Advanced',
+  },
+  {
+    title: 'Realtime monitoring and protection',
+    noProtection: 'N/A',
+    existingProtection: 'Basic',
+    zkHiveProtection: 'Advanced',
+  },
+  {
+    title: 'Intrusion detection and prevention',
+    noProtection: 'N/A',
+    existingProtection: 'N/A',
+    zkHiveProtection: 'Advanced',
+  },
+  {
+    title: 'Analomy detection',
+    noProtection: 'N/A',
+    existingProtection: 'Basic',
+    zkHiveProtection: 'Advanced',
+  },
+  {
+    title: 'Links authenticity validator',
+    noProtection: 'N/A',
+    existingProtection: 'N/A',
+    zkHiveProtection: 'Advanced',
+  },
+  {
+    title: 'User reputation score',
+    noProtection: 'N/A',
+    existingProtection: 'N/A',
+    zkHiveProtection: 'Advanced',
+  },
+]
 export const Comparison = () => {
   return (
     <div>
@@ -28,84 +67,27 @@ export const Comparison = () => {
                   zkHive Protection
                 </td>
               </tr>
-              <tr>
-                <td className='w-[200px] lg:w-[500px] pl-6 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px] text-left text-white py-10 px-2 lg:px-[35px]'>
-                  File scanning and analysis
-                </td>
-                <td
-                  className={` ${styles.table_NA} py-10 text-white text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left`}
-                >
-                  N/A
-                </td>
-                <td
-                  className={`${styles.table_NA} py-10 text-white text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left`}
-                >
-                  N/A
-                </td>
-                <td className='py-10 text-[#20F535] text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left'>
-                  Advanced
-                </td>
-              </tr>
-              <tr>
-                <td className='w-[200px] lg:w-[500px] pl-2 lg:pl-6 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left text-white py-10 px-[35px]'>
-                  File scanning and analysis
-                </td>
-                <td
-                  className={`${styles.table_NA} text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  N/A
-                </td>
-                <td
-                  className={` text-[#20F535] text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  Basic
-                </td>
-                <td
-                  className={`text-[#20F535] text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  Advanced
-                </td>
-              </tr>
-              <tr>
-                <td className='w-[200px] lg:w-[500px] pl-2 lg:pl-6 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left text-white py-10 px-[35px]'>
-                  File scanning and analysis
-                </td>
-                <td
-                  className={`${styles.table_NA} text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  N/A
-                </td>
-                <td
-                  className={`${styles.table_NA} text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  N/A
-                </td>
-                <td
-                  className={`text-[#20F535] text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  Advanced
-                </td>
-              </tr>
-              <tr>
-                <td className=' w-[200px] lg:w-[500px] pl-2 lg:pl-6 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left text-white py-10 px-[35px]'>
-                  File scanning and analysis
-                </td>
-                <td
-                  className={`${styles.table_NA} text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  N/A
-                </td>
-                <td
-                  className={`${styles.table_NA} text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  N/A
-                </td>
-                <td
-                  className={` text-[#20F535] text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left py-10`}
-                >
-                  Advanced
-                </td>
-              </tr>
+              {ComparisonData.map((data, index) => (
+                <tr key={index}>
+                  <td className='w-[200px] lg:w-[500px] pl-6 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px] text-left text-white py-10 px-2 lg:px-[35px]'>
+                    {data.title}
+                  </td>
+
+                  <td
+                    className={`${styles.table_NA} py-10 text-white text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left`}
+                  >
+                    {data.noProtection}
+                  </td>
+                  <td
+                    className={`${styles.table_NA} py-10 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left  `}
+                  >
+                    {data.existingProtection} dasdsa
+                  </td>
+                  <td className='py-10 text-[#20F535] text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left'>
+                    {data.zkHiveProtection}
+                  </td>
+                </tr>
+              ))}
             </table>
             <img
               src='/img/table-new.png'

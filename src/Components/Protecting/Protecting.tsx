@@ -24,7 +24,7 @@ export const Protecting = () => {
     <div id='about' className='bg-black'>
       <div className=' container  '>
         <div className='flex justify-center flex-col items-center'>
-          <h1 className=' text-[28px] lg:text-[49px] font-bold leading-[63.7px] text-center text-white'>
+          <h1 className=' text-[28px] lg:text-[49px] font-bold leading-[63.7px] text-center text-white title'>
             Protecting Individuals & Communities
           </h1>
           <p className=' text-[16px] lg:text-xl mt-6 w-full lg:w-[60%] font-normal text-center leading-8 !text-[#EBEDF0]'>
@@ -67,7 +67,10 @@ export const Protecting = () => {
                     </div>
                   </div>
                   <div className='flex justify-end px-[35px] mt-10'>
-                    <button className='default_button !cursor-pointer px-[38px] py-[11px]'>
+                    <button
+                      className='default_button !cursor-pointer px-[38px] py-[11px]'
+                      onClick={() => window.open('https://medium.com/@zkhive')}
+                    >
                       Learn more
                     </button>
                   </div>
@@ -100,7 +103,12 @@ export const Protecting = () => {
                       ))}
                     </ul>
                     <div className='flex justify-end mt-10'>
-                      <button className='default_button !cursor-pointer px-[38px] py-[11px]'>
+                      <button
+                        className='default_button !cursor-pointer px-[38px] py-[11px]'
+                        onClick={() =>
+                          window.open('https://medium.com/@zkhive')
+                        }
+                      >
                         Learn more
                       </button>
                     </div>
@@ -112,7 +120,10 @@ export const Protecting = () => {
               className={`px-[54px] gap-x-[163px] gap-y-[71px] grid grid-cols-1 lg:grid-cols-4 py-[52px] pb-[53px] bg-black border rounded-[30px] ${styles.partner_border} `}
             >
               {SUPONSORS.map((img, index) => (
-                <div key={index} className='flex justify-center items-center'>
+                <div
+                  key={index}
+                  className='flex justify-center items-center hover:scale-[1.1] cursor-pointer transition-all duration-300'
+                >
                   <img src={img} />
                 </div>
               ))}

@@ -11,9 +11,9 @@ interface Props {
 export const Menu = ({ open, setOpen }: Props) => {
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflowY = 'hidden'
     } else {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflowY = 'auto'
     }
   }, [open])
 
@@ -29,7 +29,7 @@ export const Menu = ({ open, setOpen }: Props) => {
             <a
               href={link.path}
               onClick={() => setOpen(false)}
-              className='text-white text-2xl not-italic font-normal leading-[160%]'
+              className='text-white text-2xl not-italic font-normal leading-[160%] hover:text-[#fbda00] transition-all duration-300'
             >
               {link.label}
             </a>
