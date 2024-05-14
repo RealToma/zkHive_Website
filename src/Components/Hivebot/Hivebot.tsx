@@ -1,7 +1,10 @@
 import styles from './Hivebot.module.css'
 export const Hivebot = () => {
   return (
-    <div className='pt-[100px] w-full lg:pt-[180px] relative' id='hivebot'>
+    <div
+      className='pt-[100px] w-full lg:pt-[180px] relative lg:px-0 px-5'
+      id='hivebot'
+    >
       <h1 className=' text-[22px] lg:text-[49px] mb-[50px] text-white  font-bold leading-[63.7px] text-center title'>
         Hivebot Is Now Live
       </h1>

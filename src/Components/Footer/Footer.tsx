@@ -144,7 +144,9 @@ export const Footer = () => {
                 className='text-[#EBEDF0]  mt-[10px] text-base not-italic font-normal leading-[normal] tracking-[0.48px] hover:text-[#fbda00] transition-all duration-300'
                 key={index}
               >
-                <a href={link.path}>{link.label}</a>
+                <a href={link.path} target='_blank'>
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>

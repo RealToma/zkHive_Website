@@ -21,3 +21,8 @@
   );
   background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
 }
+
+.social_button {
+  clip-path: polygon(50% 0, 100% 20%, 99% 82%, 49% 99%, 1% 81%, 0 20%);
+  background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+}
