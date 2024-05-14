@@ -56,34 +56,34 @@ export const Comparison = () => {
           <div className='w-full'>
             <table className={` ${styles.table} w-full overflow-x-auto`}>
               <tr>
-                <td className='w-[200px] lg:w-[500px] py-10 px-0 lg:px-[35px]'></td>
-                <td className='py-10  text-xs lg:text-2xl text-white font-medium leading-[16px] lg:leading-[38.4px] text-left'>
+                <td className='w-auto lg:w-[500px] py-2 lg:py-10 px-0 lg:px-[35px]'></td>
+                <td className='py-2 lg:py-10  text-[7px] lg:text-2xl text-white font-medium leading-[16px] lg:leading-[38.4px] text-left'>
                   No Protection
                 </td>
-                <td className='py-10  text-xs lg:text-2xl text-white font-medium leading-[16px] lg:leading-[38.4px] text-left'>
+                <td className='py-2 lg:py-10 text-[7px] lg:text-2xl text-white font-medium leading-[16px] lg:leading-[38.4px] text-left'>
                   Existing Protection
                 </td>
-                <td className='py-10  text-xs lg:text-2xl text-white font-medium leading-[16px] lg:leading-[38.4px] text-left'>
+                <td className='py-2 lg:py-10 text-[7px] lg:text-2xl text-white font-medium leading-[16px] lg:leading-[38.4px] text-left'>
                   zkHive Protection
                 </td>
               </tr>
               {ComparisonData.map((data, index) => (
                 <tr key={index}>
-                  <td className='w-[200px] lg:w-[500px] pl-6 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px] text-left text-white py-10 px-2 lg:px-[35px]'>
+                  <td className='w-auto lg:w-[500px] pl-2 lg:pl-6 text-[8px] lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px] text-left text-white py-0 lg:py-10 px-2 lg:px-[35px]'>
                     {data.title}
                   </td>
 
                   <td
-                    className={`${styles.table_NA} py-10 text-white text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left`}
+                    className={`${styles.table_NA}  py-0  lg:py-10 text-white text-[8px] lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left`}
                   >
                     {data.noProtection}
                   </td>
                   <td
-                    className={`${styles.table_NA} py-10 text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left  `}
+                    className={`${styles.table_NA}  py-2  lg:py-10 text-[8px] lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left  `}
                   >
-                    {data.existingProtection} dasdsa
+                    {data.existingProtection}
                   </td>
-                  <td className='py-10 text-[#20F535] text-xs lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left'>
+                  <td className=' py-2  text-[#20F535] text-[8px] lg:text-2xl font-bold leading-[16px] lg:leading-[38.4px]  text-left'>
                     {data.zkHiveProtection}
                   </td>
                 </tr>

@@ -13,7 +13,7 @@ export const Card = ({ className, roads, title }: Props) => {
       className={`${styles.card_bg} flex items-center flex-col justify-center rounded-[12px] ${className} `}
     >
       <div>
-        <h1 className='text-[#FFF] text-center  text-[61px] not-italic font-bold leading-[120%]'>
+        <h1 className='text-[#FFF] text-center  text-[35px] lg:text-[61px] not-italic font-bold leading-[120%]'>
           {title}
         </h1>
         <div className={`w-[97px]  m-auto h-[1px] ${styles.line}`}></div>

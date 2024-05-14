@@ -35,14 +35,14 @@ export const Roadmap = () => {
         <div
           className={` block lg:hidden col-span-1 lg:col-span-2 ${styles.border} `}
         >
-          <h1 className='text-[#FFF] text-center text-[49px] not-italic font-bold leading-[130%]'>
+          <h1 className='text-[#FFF] text-center text-xl lg:text-[49px] not-italic font-bold leading-[130%]'>
             Roadmap
           </h1>
         </div>
         <Card
           roads={P1ROADS}
           title='P1'
-          className=' pb-[27px] !row-span-1 lg:!row-span-3'
+          className='pb-[27px] pt-[14px] !row-span-1 lg:!row-span-3'
         />
         <div
           className={` hidden lg:block col-span-1 lg:col-span-2 ${styles.border} `}
@@ -54,7 +54,7 @@ export const Roadmap = () => {
         <Card
           roads={P4ROADS}
           title='P4'
-          className='row-span-3 pb-[27px] hidden lg:flex'
+          className='row-span-3 pt-[14px] pb-[27px] hidden lg:flex'
         />
         <Card
           roads={P2ROADS}
@@ -69,7 +69,7 @@ export const Roadmap = () => {
         <Card
           roads={P4ROADS}
           title='P4'
-          className='row-span-3 pb-[27px] block lg:hidden'
+          className='row-span-3 pt-[14px] pb-[27px] block lg:hidden'
         />
       </div>
     </div>

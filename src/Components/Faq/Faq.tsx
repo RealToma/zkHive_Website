@@ -4,15 +4,23 @@ import styles from './Faq.module.css'
 export const Faq = () => {
   return (
     <div className=' pt-[100px] lg:pt-[124px]'>
-      <div className=' relative px-5 lg:px-0 container'>
-        <img src='/img/circle.png' className='mt-10' />
-        <div className=' absolute w-full lg:w-[800px] h-[50px] left-1/2 -translate-x-1/2  lg:top-[-100px] top-[-200px]'>
-          <img src='/img/blur.png' className=' absolute z-[-1] top-0' />
-          <img src='/img/wall.png ' />
+      <div className='relative lg:px-0 container'>
+        <img
+          src='/img/circle.png'
+          className='mt-10 absolute top-[-120px] h-[183px] w-full'
+        />
+        <div className='relative'>
+          <img
+            src='/img/faq-img.png'
+            className='absolute w-[426px] translate-y-[-50%] h-[193px] top-0 left-[50%] translate-x-[-50%]'
+          />
+          <img
+            src='/img/FAQ-img-1.png'
+            className=' absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] w-[250px] h-[250px]'
+          />
         </div>
-
         <h1 className='text-[#FFF] text-center text-[22px] lg:text-[49px] not-italic font-bold leading-[130%]'>
-          FAQ
+          F.A.Q
         </h1>
         <div
           className={` px-5 lg:p-[30px] ${styles.border} mt-[50px] w-full flex flex-col gap-y-[15px] p-[30px]  `}

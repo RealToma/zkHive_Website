@@ -32,19 +32,19 @@ const NAVIGATION = [
 const QUICK_LINKS = [
   {
     label: 'Uniswap',
-    path: '#',
+    path: 'https://app.uniswap.org/swap?outputCurrency=0x750c3a0a0ce9984eeb8c5d146dff024b584e5e33&use=V2',
   },
   {
     label: 'Etherscan',
-    path: '#',
+    path: 'https://etherscan.io/address/0x750c3a0a0ce9984eeb8c5d146dff024b584e5e33',
   },
   {
     label: 'Dextools',
-    path: '#',
+    path: 'https://www.dextools.io/app/en/ether/pair-explorer/0x6fe467be1f4b7d438e9393fd394d9ca3c245c604?t=1709650669482',
   },
   {
     label: 'Github',
-    path: '#',
+    path: 'https://github.com/zkhive',
   },
   {
     label: 'Medium',
@@ -76,16 +76,18 @@ export const Footer = () => {
 
       <div className=' px-5 lg:px-0 container gap-y-8 flex-col lg:flex-row flex justify-between text-white'>
         <div>
-          <a>
+          <a href='#'>
             <img src='/img/ZK-logo_menu.png' />
           </a>
           <div className='flex mt-[30px] gap-x-[15px]'>
             <button
+              onClick={() => window.open('https://t.me/zkhive_token')}
               className={`${styles.button} flex justify-center items-center text-black border w-[35px] h-[35px] rounded-full`}
             >
               <TelegramIcon className='w-[16px] h-[16px]' />
             </button>
             <button
+              onClick={() => window.open('https://x.com/zkhive')}
               className={` ${styles.button} text-black flex justify-center items-center border w-[35px] h-[35px] rounded-full`}
             >
               <TwitterIcon className='w-[16px] h-[16px]' />
@@ -125,7 +127,9 @@ export const Footer = () => {
                 key={index}
                 className='text-[#EBEDF0]  mt-[10px] text-base not-italic font-normal leading-[normal] tracking-[0.48px] hover:text-[#fbda00] transition-all duration-300'
               >
-                <a href={link.path}>{link.label}</a>
+                <a target='_blank' href={link.path}>
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>

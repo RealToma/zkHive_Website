@@ -37,7 +37,7 @@ export const Header = () => {
         </button>
         <div
           onClick={() => setOpen((prev) => !prev)}
-          className={` block  z-[99] lg:hidden ${styles.nav_icon} ${
+          className={` block  z-[100] lg:hidden ${styles.nav_icon} ${
             open ? styles.open : ''
           }`}
         >

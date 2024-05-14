@@ -10,8 +10,8 @@ interface Props {
 export const AboutCard = ({ title, img, description, text }: Props) => {
   return (
     <div
-      className={`w-full flex flex-col ${
-        text === 'right' ? 'items-end' : 'items-start'
+      className={`w-full flex flex-col items-center ${
+        text === 'right' ? 'lg:items-end' : 'lg:items-start '
       }`}
     >
       <div
@@ -20,8 +20,8 @@ export const AboutCard = ({ title, img, description, text }: Props) => {
         <img src={img} alt={title} />
       </div>
       <h1
-        className={`text-white mt-[50px] mb-[16px] text-2xl font-bold leading-[33.6px] ${
-          text === 'left' ? 'text-left' : 'text-right'
+        className={`text-white mt-[50px] mb-[16px] text-2xl font-bold leading-[33.6px] text-center ${
+          text === 'left' ? 'lg:text-left' : 'lg:text-right'
         }`}
       >
         {title}

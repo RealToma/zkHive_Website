@@ -21,7 +21,7 @@ export const Menu = ({ open, setOpen }: Props) => {
     <div
       className={`${styles.header_border_links_bg} ${
         open ? 'left-0' : '-left-full'
-      } fixed flex justify-center  items-center top-0 min-h-screen w-full z-10`}
+      } fixed flex justify-start  items-start pl-4 pt-[45px] top-0 min-h-screen w-full z-[99]`}
     >
       <ul className='flex flex-col gap-y-5'>
         {HEADER_LINKS.map((link, index) => (
