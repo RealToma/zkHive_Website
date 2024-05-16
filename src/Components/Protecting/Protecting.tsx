@@ -1,6 +1,11 @@
+import { useEffect, useRef } from 'react'
 import { SUPONSORS } from '../../constants/About'
 import { Star } from '../../icons/Star'
 import styles from './Protecting.module.css'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const INDIVIDUALS = [
   'Analyses files, pdfs and documents',
@@ -20,6 +25,41 @@ const COMMUNITIES = [
 ]
 
 export const Protecting = () => {
+  const ref = useRef(null)
+  const sponsorsRef = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
+  useEffect(() => {
+    const el = sponsorsRef.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
   return (
     <div id='about' className='bg-black'>
       <div className=' container px-5 lg:px-0  '>
@@ -34,7 +74,7 @@ export const Protecting = () => {
         </div>
         <div>
           <div className={`${styles.default_bg} mt-[50px] rounded-[30px]`}>
-            <div className='py-5 lg:py-[60px] px-0 lg:px-[70px]'>
+            <div ref={ref} className='py-5 lg:py-[60px] px-0 lg:px-[70px]'>
               <div className='flex flex-col gap-y-5 lg:flex-row'>
                 <div
                   className={` w-full lg:w-[50%] rounded-r-[30px] lg:rounded-r-none rounded-l-[30px] px-6  lg:pl-10  py-6 lg:py-[75px] ${styles.card_gradient}`}
@@ -117,6 +157,7 @@ export const Protecting = () => {
               </div>
             </div>
             <div
+              ref={sponsorsRef}
               className={`px-[54px] gap-x-[163px] gap-y-[35px] lg:gap-y-[71px] grid grid-cols-1 lg:grid-cols-4 py-[52px] pb-[53px] bg-black border rounded-[30px] ${styles.partner_border} `}
             >
               {SUPONSORS.map((img, index) => (

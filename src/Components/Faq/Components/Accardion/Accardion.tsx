@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ReactNode, useState } from 'react'
 import styles from './Accordion.module.css'
 import { Minus } from '../../../../icons/Minus'
@@ -6,12 +7,14 @@ import { Plus } from '../../../../icons/Plus'
 interface Props {
   title: string
   description: string | ReactNode
+  ref?: any
 }
 
-export const Accardion = ({ title, description }: Props) => {
+export const Accardion = ({ title, description, ref }: Props) => {
   const [open, setOpen] = useState(false)
   return (
     <div
+      ref={ref}
       onClick={() => setOpen(!open)}
       className={`p-[30px] transition-all  duration-300 ${
         open ? 'max-h-[230px]' : 'max-h-[76px] lg:max-h-[90px]'

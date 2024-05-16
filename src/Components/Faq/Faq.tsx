@@ -1,10 +1,33 @@
+import { useEffect, useRef } from 'react'
 import { Accardion } from './Components'
 import styles from './Faq.module.css'
 
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
 export const Faq = () => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
   return (
     <div className=' pt-[100px] lg:pt-[124px]'>
-      <div className='relative lg:px-0 container'>
+      <div ref={ref} className='relative lg:px-0 container'>
         <img
           src='/img/circle.png'
           className='mt-10 absolute top-[-120px] h-[183px] w-full'

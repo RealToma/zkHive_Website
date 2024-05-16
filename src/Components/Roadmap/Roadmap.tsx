@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { Card } from './Components'
 import styles from './Roadmap.module.css'
 const P1ROADS = [
@@ -28,9 +29,31 @@ const P4ROADS = [
   'Train the models on new datasets',
 ]
 
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
 export const Roadmap = () => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
   return (
-    <div id='roadmap' className={` pt-[100px]  lg:pt-[180px] `}>
+    <div id='roadmap' ref={ref} className={` pt-[100px]  lg:pt-[180px] `}>
       <div className=' gap-x-[29px] gap-y-[30px] px-5 lg:px-0 container grid grid-cols-1 lg:grid-cols-4'>
         <div
           className={` block lg:hidden col-span-1 lg:col-span-2 ${styles.border} `}

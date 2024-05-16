@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import styles from './Comparison.module.css'
 
 const ComparisonData = [
@@ -38,10 +39,33 @@ const ComparisonData = [
     zkHiveProtection: 'Advanced',
   },
 ]
+
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
 export const Comparison = () => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
   return (
     <div>
-      <div id='comparison' className='container px-5 lg:px-0'>
+      <div ref={ref} id='comparison' className='container px-5 lg:px-0'>
         <div
           className={`mt-[100px] lg:mt-[180px] pb-[2rem] relative h-auto  lg:min-h-auto ${styles.table_container}`}
         >

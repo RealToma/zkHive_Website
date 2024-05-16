@@ -9,10 +9,54 @@ const CONNECTIVITY = [
   '/img/scroll-images/scroll_img_6.png',
 ]
 
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useEffect, useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
+
 export const Connectivity = () => {
+  const ref = useRef(null)
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    const el = containerRef.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
+  useEffect(() => {
+    const el = ref.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
   return (
     <div className=' pt-[100px] lg:pt-[174px] w-full'>
-      <div className='container px-5 lg:px-0 gap-y-20 flex-col lg:flex-row flex gap-x-[78px]'>
+      <div
+        ref={containerRef}
+        className='container px-5 lg:px-0 gap-y-20 flex-col lg:flex-row flex gap-x-[78px]'
+      >
         <div className='w-full flex justify-center lg:block lg:w-[40%]'>
           <img src='/img/powered-by-connectivity-ai.png' />
         </div>
@@ -28,9 +72,7 @@ export const Connectivity = () => {
               <div
                 className={`w-[25px] absolute top-[25px] left-[-11.5px] h-[25px] rounded-full ${styles.small_cricle_bg} `}
               ></div>
-              <div
-                className={`w-[25px] absolute bottom-[20px] lg:bottom-[35px] left-[-11.5px] h-[25px] rounded-full ${styles.small_cricle_bg} `}
-              ></div>
+              <div></div>
             </div>
             <div>
               <p className=' text-xs lg:text-xl mt-6 text-[#EBEDF0] font-normal leading-4 lg:leading-8 text-left'>

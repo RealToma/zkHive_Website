@@ -1,8 +1,33 @@
+import { useEffect, useRef } from 'react'
 import { AboutCard } from './Components'
 import styles from './Features.module.css'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 export const Features = () => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    gsap.fromTo(
+      el,
+      { y: 400, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+  }, [])
+
   return (
     <div
+      ref={ref}
       id='features'
       className='flex mt-[50px] lg:mt-[180px] flex-col lg:flex-row justify-between container px-5 lg:px-0'
     >
