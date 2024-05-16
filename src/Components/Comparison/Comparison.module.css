@@ -34,6 +34,18 @@
   );
 }
 
+.table tr {
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+
+.table tr:hover {
+  background: yellow;
+  color: black !important;
+}
+.table tr:hover td {
+  color: black !important;
+}
 .table_NA {
   background: var(
     --Linear,

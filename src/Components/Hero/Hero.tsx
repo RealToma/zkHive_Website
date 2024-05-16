@@ -51,15 +51,17 @@ export const Hero = () => {
           <div className='z-[10] relative w-full lg:w-1/2 -translate-y-[0px] flex items-center '>
             <div className='flex pl-10 pr-10 pt-20 lg:pt-0 lg:pl-0 translate-y-0 gap-y-[100px] lg:translate-y-[-100px] w-full justify-between lg:justify-normal lg:w-auto flex-row lg:flex-col lg:gap-y-[50px]'>
               {SOCIAL_LINKS.map((icon, index) => (
-                <button
-                  key={index}
-                  className={`w-[15px] h-[15px]  lg:w-[93px] lg:h-[93px] text-black flex justify-center items-center z-[100]`}
-                  onClick={() => window.open(icon.link)}
-                >
-                  <span className={` p-[22px] ${styles.social_button} `}>
-                    {icon.icon}
-                  </span>
-                </button>
+                <div className={styles.btn}>
+                  <button
+                    key={index}
+                    className={`w-[15px] h-[15px]  lg:w-[93px] lg:h-[93px] text-black flex justify-center items-center z-[100]`}
+                    onClick={() => window.open(icon.link)}
+                  >
+                    <span className={` p-[22px] ${styles.social_button} `}>
+                      {icon.icon}
+                    </span>
+                  </button>
+                </div>
               ))}
             </div>
           </div>
@@ -80,20 +82,24 @@ export const Hero = () => {
               to the process.
             </p>
             <div className='flex justify-center gap-y-[30px] px-4 lg:px-0 flex-row gap-x-1 lg:gap-x-[30px] mt-[50px]'>
-              <button
-                className={` ${styles.hero_button}  text-xs lg:text-base cursor-pointer px-3 lg:px-[36px] py-[11px] flex items-center justify-center gap-x-2.5 text-black min-w-[50%] lg:min-w-[185px]`}
-                onClick={() => window.open('https://t.me/zkhive_token')}
-              >
-                <TelegramIcon className='w-6 h-6  lg:h-auto lg:w-auto ' />
-                community
-              </button>
-              <button
-                className={`${styles.hero_button} text-xs lg:text-base cursor-pointer px-3 lg:px-[36px] py-[11px] flex justify-center items-center gap-x-2.5 text-black min-w-[50%] lg:min-w-[185px] `}
-                onClick={() => window.open('https://t.me/zkhive_bot')}
-              >
-                <HiveBot className=' w-[27px] h-[27px] lg:w-[17px] lg:h-[17px]' />
-                hive Bot
-              </button>
+              <div className={styles.btn}>
+                <button
+                  className={` ${styles.hero_button}  text-xs lg:text-base cursor-pointer px-3 lg:px-[36px] py-[11px] flex items-center justify-center gap-x-2.5 text-black min-w-[50%] lg:min-w-[185px]`}
+                  onClick={() => window.open('https://t.me/zkhive_token')}
+                >
+                  <TelegramIcon className='w-6 h-6  lg:h-auto lg:w-auto ' />
+                  community
+                </button>
+              </div>
+              <div className={styles.btn}>
+                <button
+                  className={`${styles.hero_button} text-xs lg:text-base cursor-pointer px-3 lg:px-[36px] py-[11px] flex justify-center items-center gap-x-2.5 text-black min-w-[50%] lg:min-w-[185px] `}
+                  onClick={() => window.open('https://t.me/zkhive_bot')}
+                >
+                  <HiveBot className=' w-[27px] h-[27px] lg:w-[17px] lg:h-[17px]' />
+                  hive Bot
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -103,9 +109,11 @@ export const Hero = () => {
         <Line className=' absolute top-20 left-[30%]' />
         <Line className=' absolute top-[20px] left-[70%]' />
       </div>
-      <button className='absolute bottom-[100px] left-1/2 -translate-x-1/2'>
-        <img src='./img/mouse.png' />
-      </button>
+      <div className='animate-bounce absolute bottom-[100px] left-[50%]'>
+        <button className=' bottom-[100px] left-[50%] -translate-x-1/2'>
+          <img src='./img/mouse.png' />
+        </button>
+      </div>
     </div>
   )
 }

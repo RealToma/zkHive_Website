@@ -24,17 +24,18 @@ export const Header = () => {
             </li>
           ))}
         </ul>
-
-        <button
-          className={`cursor-pointer hidden lg:flex items-center ${styles.buy_token_button} px-[33px] py-[11px] flex items-center gap-x-2.5 text-black`}
-          onClick={() =>
-            window.open(
-              'https://app.uniswap.org/swap?outputCurrency=0x750c3a0a0ce9984eeb8c5d146dff024b584e5e33&use=V2'
-            )
-          }
-        >
-          <Horse /> Buy Token
-        </button>
+        <div className={styles.btn}>
+          <button
+            className={`cursor-pointer hidden lg:flex items-center ${styles.buy_token_button} px-[33px] py-[11px] flex items-center gap-x-2.5 text-black`}
+            onClick={() =>
+              window.open(
+                'https://app.uniswap.org/swap?outputCurrency=0x750c3a0a0ce9984eeb8c5d146dff024b584e5e33&use=V2'
+              )
+            }
+          >
+            <Horse /> Buy Token
+          </button>
+        </div>
         <div
           onClick={() => setOpen((prev) => !prev)}
           className={` block  z-[100] lg:hidden ${styles.nav_icon} ${

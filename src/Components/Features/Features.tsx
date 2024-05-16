@@ -7,19 +7,50 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export const Features = () => {
-  const ref = useRef(null)
+  const leftRef = useRef(null)
+  const rightRef = useRef(null)
+
+  const centerRef = useRef(null)
 
   useEffect(() => {
-    const el = ref.current
+    const leftElement = leftRef.current
     gsap.fromTo(
-      el,
-      { y: 400, opacity: 0 },
+      leftElement,
+      { x: -400, opacity: 0 },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: el,
+          trigger: leftElement,
+        },
+      }
+    )
+
+    const rightElement = rightRef.current
+    gsap.fromTo(
+      rightElement,
+      { x: 400, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: rightElement,
+        },
+      }
+    )
+
+    const centerElement = centerRef.current
+    gsap.fromTo(
+      centerElement,
+      { opacity: 0, scale: 0.5 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: centerElement,
         },
       }
     )
@@ -27,11 +58,13 @@ export const Features = () => {
 
   return (
     <div
-      ref={ref}
       id='features'
       className='flex mt-[50px] lg:mt-[180px] flex-col lg:flex-row justify-between container px-5 lg:px-0'
     >
-      <div className='hidden lg:flex w-full lg:w-[30%]  flex-col gap-y-[50px] lg:gap-y-[250px]'>
+      <div
+        ref={leftRef}
+        className='hidden lg:flex w-full lg:w-[30%]  flex-col gap-y-[50px] lg:gap-y-[250px]'
+      >
         <AboutCard
           text='left'
           img='/img/time-clock.png'
@@ -45,7 +78,10 @@ export const Features = () => {
           description='Harness the power of the first ever decentralized security network, built and evolves using AI peer-to-peer technology! Whenever threat is detect in any of zkHive’s groups or reported by individuals, it is immediately blocked in all of them.'
         />
       </div>
-      <div className='w-full relative lg:w-[40%] flex justify-center items-center'>
+      <div
+        ref={centerRef}
+        className='w-full relative lg:w-[40%] flex justify-center items-center'
+      >
         <div className='absolute left-[-320px] top-[-150px] w-full'>
           <img src='/img/blur.png' className='!max-w-max lg:h-auto w-auto' />
           <img
@@ -66,7 +102,10 @@ export const Features = () => {
           </div>
         </div>
       </div>
-      <div className='lg:hidden w-full lg:w-[30%] flex flex-col gap-y-[50px] lg:gap-y-[250px]'>
+      <div
+        ref={rightRef}
+        className='lg:hidden w-full lg:w-[30%] flex flex-col gap-y-[50px] lg:gap-y-[250px]'
+      >
         <AboutCard
           text='left'
           img='/img/time-clock.png'
@@ -80,7 +119,10 @@ export const Features = () => {
           description='Harness the power of the first ever decentralized security network, built and evolves using AI peer-to-peer technology! Whenever threat is detect in any of zkHive’s groups or reported by individuals, it is immediately blocked in all of them.'
         />
       </div>
-      <div className='w-full lg:w-[30%] flex mt-[50px] lg:mt-0 flex-col gap-y-[50px] lg:gap-y-[250px]'>
+      <div
+        ref={rightRef}
+        className='w-full lg:w-[30%] flex mt-[50px] lg:mt-0 flex-col gap-y-[50px] lg:gap-y-[250px]'
+      >
         <AboutCard
           text='right'
           img='/img/ai.png'

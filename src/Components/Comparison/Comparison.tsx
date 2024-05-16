@@ -115,7 +115,7 @@ export const Comparison = () => {
             </table>
             <img
               src='/img/table-new.png'
-              className='w-full absolute h-full hidden lg:block top-0 left-0'
+              className='w-full absolute h-full hidden lg:block top-0 left-0 z-[-1]'
             />
           </div>
         </div>

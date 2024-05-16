@@ -16,16 +16,29 @@ import { useEffect, useRef } from 'react'
 gsap.registerPlugin(ScrollTrigger)
 
 export const Connectivity = () => {
-  const ref = useRef(null)
-  const containerRef = useRef(null)
+  const leftRef = useRef(null)
+  const rightRef = useRef(null)
 
   useEffect(() => {
-    const el = containerRef.current
+    const el = leftRef.current
     gsap.fromTo(
       el,
-      { y: 400, opacity: 0 },
+      { x: -400, opacity: 0 },
       {
-        y: 0,
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    )
+    const el1 = rightRef.current
+    gsap.fromTo(
+      el1,
+      { x: 400, opacity: 0 },
+      {
+        x: 0,
         opacity: 1,
         duration: 1,
         scrollTrigger: {
@@ -35,44 +48,28 @@ export const Connectivity = () => {
     )
   }, [])
 
-  useEffect(() => {
-    const el = ref.current
-    gsap.fromTo(
-      el,
-      { y: 400, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 2,
-        scrollTrigger: {
-          trigger: el,
-        },
-      }
-    )
-  }, [])
-
   return (
     <div className=' pt-[100px] lg:pt-[174px] w-full'>
-      <div
-        ref={containerRef}
-        className='container px-5 lg:px-0 gap-y-20 flex-col lg:flex-row flex gap-x-[78px]'
-      >
-        <div className='w-full flex justify-center lg:block lg:w-[40%]'>
+      <div className='container px-5 lg:px-0 gap-y-20 flex-col lg:flex-row flex gap-x-[78px]'>
+        <div
+          ref={leftRef}
+          className='w-full flex justify-center lg:block lg:w-[40%]'
+        >
           <img src='/img/powered-by-connectivity-ai.png' />
         </div>
-        <div className=' w-full lg:w-[60%]'>
-          <h1 className='text-[28px] lg:text-[49px] font-bold lg:leading-[63.7px] text-center lg:text-left text-white title'>
+        <div ref={rightRef} className=' w-full lg:w-[60%]'>
+          <h1 className='text-[28px] ml-[28px] lg:text-[49px] font-bold lg:leading-[63.7px] text-center lg:text-left text-white title'>
             Powered by connectivity AI
           </h1>
           <div className='flex gap-x-[28px] '>
             <div className='relative'>
-              <div
-                className={` ${styles.small_cricle_bg} w-[1px] bg-[red] h-full`}
-              />
+              <div className={` ${styles.small_cricle_bg} w-[1px] h-full`} />
               <div
                 className={`w-[25px] absolute top-[25px] left-[-11.5px] h-[25px] rounded-full ${styles.small_cricle_bg} `}
               ></div>
-              <div></div>
+              <div
+                className={`w-[25px] absolute bottom-[25px] lg:bottom-[30px] left-[-11.5px] h-[25px] rounded-full ${styles.small_cricle_bg} `}
+              ></div>
             </div>
             <div>
               <p className=' text-xs lg:text-xl mt-6 text-[#EBEDF0] font-normal leading-4 lg:leading-8 text-left'>

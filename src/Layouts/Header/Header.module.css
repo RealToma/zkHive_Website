@@ -11,6 +11,23 @@
     0.556% 70.923%
   );
   background: linear-gradient(90deg, #61b7f0 15.84%, #fcf406 100%);
+  position: relative;
+}
+
+.buy_token_button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  filter: drop-shadow(0px 0px 10px #f6e05e);
 }
 
 .nav_icon {
