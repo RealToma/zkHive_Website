@@ -24,7 +24,7 @@ export const Header = () => {
             </li>
           ))}
         </ul>
-        <div className={styles.btn}>
+        <div className={'btn'}>
           <button
             className={`cursor-pointer hidden lg:flex items-center ${styles.buy_token_button} px-[33px] py-[11px] flex items-center gap-x-2.5 text-black`}
             onClick={() =>

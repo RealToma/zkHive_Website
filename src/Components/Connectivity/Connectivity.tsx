@@ -27,7 +27,7 @@ export const Connectivity = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: el,
         },
@@ -40,7 +40,7 @@ export const Connectivity = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: el,
         },

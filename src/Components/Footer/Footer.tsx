@@ -80,18 +80,22 @@ export const Footer = () => {
             <img src='/img/ZK-logo_menu.png' />
           </a>
           <div className='flex mt-[30px] gap-x-[15px]'>
-            <button
-              onClick={() => window.open('https://t.me/zkhive_token')}
-              className={`${styles.button} flex justify-center items-center text-black border w-[35px] h-[35px] rounded-full`}
-            >
-              <TelegramIcon className='w-[16px] h-[16px]' />
-            </button>
-            <button
-              onClick={() => window.open('https://x.com/zkhive')}
-              className={` ${styles.button} text-black flex justify-center items-center border w-[35px] h-[35px] rounded-full`}
-            >
-              <TwitterIcon className='w-[16px] h-[16px]' />
-            </button>
+            <div className='btn'>
+              <button
+                onClick={() => window.open('https://t.me/zkhive_token')}
+                className={`${styles.button} flex justify-center items-center text-black border w-[35px] h-[35px] rounded-full`}
+              >
+                <TelegramIcon className='w-[16px] h-[16px]' />
+              </button>
+            </div>
+            <div className='btn'>
+              <button
+                onClick={() => window.open('https://x.com/zkhive')}
+                className={` ${styles.button} text-black flex justify-center items-center border w-[35px] h-[35px] rounded-full`}
+              >
+                <TwitterIcon className='w-[16px] h-[16px]' />
+              </button>
+            </div>
           </div>
           <p className='my-[10px] text-[#EBEDF0] text-base not-italic font-medium leading-[120%]'>
             Email: contact@zkhive.io

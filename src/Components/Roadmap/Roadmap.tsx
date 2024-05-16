@@ -48,7 +48,7 @@ export const Roadmap = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: top,
         },
@@ -62,7 +62,7 @@ export const Roadmap = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: right,
         },
@@ -76,7 +76,7 @@ export const Roadmap = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: left,
         },
@@ -90,7 +90,7 @@ export const Roadmap = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: btm,
         },
@@ -104,7 +104,7 @@ export const Roadmap = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: bottom,
         },

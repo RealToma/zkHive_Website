@@ -36,7 +36,7 @@ export const Protecting = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: el,
         },
@@ -52,7 +52,7 @@ export const Protecting = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: el,
         },
@@ -88,7 +88,7 @@ export const Protecting = () => {
                   <div className='flex flex-col lg:flex-row gap-x-[31px]'>
                     <img
                       className='w-full lg:w-[45%] h-full object-contain rounded-[20px]'
-                      src='/img/communities.jpg'
+                      src='/img/communities_01.png'
                     />
                     <div className=' w-full lg:w-[55%]'>
                       <ul className='w-full flex justify-start flex-col gap-y-6 mt-[18px]'>
@@ -107,12 +107,16 @@ export const Protecting = () => {
                     </div>
                   </div>
                   <div className='flex justify-end px-[35px] mt-10'>
-                    <button
-                      className='default_button !cursor-pointer px-[38px] py-[11px]'
-                      onClick={() => window.open('https://medium.com/@zkhive')}
-                    >
-                      Learn more
-                    </button>
+                    <div className='btn'>
+                      <button
+                        className='default_button !cursor-pointer px-[38px] py-[11px]'
+                        onClick={() =>
+                          window.open('https://medium.com/@zkhive')
+                        }
+                      >
+                        Learn more
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -125,7 +129,7 @@ export const Protecting = () => {
                     <div className={`${styles.line} my-10 !w-full `}></div>
                     <img
                       className=' w-full lg:w-[293px]'
-                      src='/img/be_about.jpg'
+                      src='/img/communities-backup_01.png'
                     />
                   </div>
                   <div className='w-full'>
@@ -143,14 +147,16 @@ export const Protecting = () => {
                       ))}
                     </ul>
                     <div className='flex justify-end mt-10'>
-                      <button
-                        className='default_button !cursor-pointer px-[38px] py-[11px]'
-                        onClick={() =>
-                          window.open('https://medium.com/@zkhive')
-                        }
-                      >
-                        Learn more
-                      </button>
+                      <div className='btn'>
+                        <button
+                          className='default_button !cursor-pointer px-[38px] py-[11px]'
+                          onClick={() =>
+                            window.open('https://medium.com/@zkhive')
+                          }
+                        >
+                          Learn more
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
