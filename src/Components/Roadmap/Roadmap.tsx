@@ -154,12 +154,12 @@ export const Roadmap = () => {
           title='P3'
           className='row-span-2 pt-[14px] !justify-start pb-[27px]'
         />
-        <Card
-          ref={rightRef}
+        {/* <Card
+          ref={leftRef}
           roads={P4ROADS}
           title='P4'
           className='row-span-3 pt-[14px] pb-[27px] block lg:hidden'
-        />
+        /> */}
       </div>
     </div>
   )
